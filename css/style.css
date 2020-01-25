@@ -55,9 +55,6 @@
   line-height: 1.405;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
-.head .menu:hover .list {
-  display: block;
-}
 
 .head .menu::after {
   content: '';
@@ -72,23 +69,28 @@
 .head .list {
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
   margin-left: auto;
   margin-right: auto;
   width: 245px;
   list-style: none;
   z-index: 2;
-  top: 42%;
+  top: 33%;
   left: 50%;
   transform: translateY(-50%);
   transform: translateX(-50%);
+  cursor: pointer;
 }
-
+/*********** ? ***********/
+.head .menu:hover .list {
+  display: block;
+}
+/***********   ********** */
 .head .item {
   height: 40px;
   line-height: 40px;
   text-transform: uppercase;
   border-bottom: 2px solid #edbfff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .head .item:hover {
@@ -151,6 +153,10 @@
   }
 }
 @media screen and (min-width: 480px) {
+  .head .list {
+    top: 32%;
+  }
+
   .head .slider {
     max-width: 400px;
     padding-bottom: 70px;
