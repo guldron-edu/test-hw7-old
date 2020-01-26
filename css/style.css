@@ -10,14 +10,26 @@
   text-align: center;
   font-family: 'League Gothic';
 }
+.list,
+.list-menu {
+  list-style: none;
+}
 
 .title,
 .menu,
 .text,
 .list,
-.item {
+.list-menu,
+.item,
+.item-menu {
   margin: 0;
   padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
 }
 /*********************************** HEAD ***********************************/
 .head {
@@ -67,34 +79,31 @@
 }
 
 .head .list {
-  display: none;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   width: 245px;
-  list-style: none;
-  z-index: 2;
   top: 33%;
   left: 50%;
   transform: translateY(-50%);
   transform: translateX(-50%);
   cursor: pointer;
+  z-index: 2;
 }
-/*********** ? ***********/
-.head .menu:hover .list {
-  display: block;
-}
-/***********   ********** */
-.head .item {
+
+.head .item-menu {
+  display: none;
   height: 40px;
   line-height: 40px;
   text-transform: uppercase;
   border-bottom: 2px solid #edbfff;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
-.head .item:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+.head .menu:hover .item-menu {
+  display: block;
+}
+.head .item-menu:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .head .slider {
@@ -163,6 +172,11 @@
     text-align: left;
     padding-left: 40px;
     margin-right: auto;
+    background-image: url('../images/Iphone.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position-y: 37px;
+    background-position-x: 268px;
   }
 
   .head .slider .left {
@@ -176,9 +190,11 @@
   .head .slider .text {
     margin-bottom: 120px;
   }
+
   .head .slider .radio:nth-last-child(4) {
     margin-left: 75px;
   }
+
   /* .head .slider .radio {
     margin-left: 75px;
   }
